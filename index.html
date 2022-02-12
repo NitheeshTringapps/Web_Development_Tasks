@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD</title>
     <link rel="stylesheet" href="style.css">
-    <script src="data.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="personalDetails">
         <h1>Personal Details</h1>
-        <form action="" id="myForm" method="post" onsubmit="myForm(); return false; alert('Submitted Successfully')">
+        <form id="myForm">
             <label for="name" style="position: relative; left: -45px;">Name:</label>
             <input type="text" id="name" style="position: relative; left: 30px;" required oninvalid="this.setCustomValidity('Enter Your Name here')" oninput="this.setCustomValidity('')"><br><br>
             <label for="dob" style="position: relative; left: -30px;">Date of Birth:</label>
@@ -36,16 +36,15 @@
             <label for="reading" style="position: relative; left: 20px;">Reading</label><br>
             <input class="check" type="checkbox" id="writing" name="hobby" value="Writing" style="position: relative; left: 20px;">
             <label for="writing" style="position: relative; left: 20px;">Writing</label><br><br>
-            <label for="address" style="position: relative; left: -30px; top: -140px;">Address:</label>
-            <textarea name="address" id="address" cols="21" rows="10"  style="position: relative; left: 35px;" required oninvalid="this.setCustomValidity('Enter Your Address here')" oninput="this.setCustomValidity('')"></textarea><br><br>
+            <label for="address" style="position: relative; left: -30px; top: -80px;">Address:</label>
+            <textarea name="address" id="address" cols="21" rows="6"  style="position: relative; left: 35px;" required oninvalid="this.setCustomValidity('Enter Your Address here')" oninput="this.setCustomValidity('')"></textarea><br><br>
             <input type="submit" style="position: relative; left: 60px;">
             <input type="reset"  style="position: relative; left: 60px;">
         </form>
     </div><br><br>
     <div class="table">
-        <table id="data">
+        <table>
             <tr>
-                <th>S.No</th>
                 <th>Name</th>
                 <th>Date of Birth</th>
                 <th>Gender</th>
@@ -55,7 +54,7 @@
                 <th>Address</th>
                 <th>Action</th>
             </tr>
-        </table><br><br>
+        </table>
     </div>
 </body>
 </html>
