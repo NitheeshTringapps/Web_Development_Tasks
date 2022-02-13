@@ -40,27 +40,28 @@ function myForm(event, val){
         hobbiesChecked[2]=document.getElementById("writing").checked;
         return hobbiesChecked;
     }
+    var myTr=document.createElement("tr");
+    myTr.setAttribute("class","details");
+    var newDetail=[];
+    for(let i=0;i<8;i++){
+        newDetail[i]=document.createElement("td");
+    }
+    newDetail[0].innerText=list[val].name;
+    newDetail[1].innerText=list[val].dob;
+    newDetail[2].innerText=list[val].gender;
+    newDetail[3].innerText=list[val].maraitalStatus;
+    newDetail[4].innerText=list[val].phone;
+    newDetail[5].innerText=list[val].hobby;
+    newDetail[6].innerText=list[val].address;
     if(val == x){
-        var myTr=document.createElement("tr");
-        var newDetail=[];
-        myTr.setAttribute("class","details");
-        for(let i=0;i<8;i++){
-            newDetail[i]=document.createElement("td");
-        }
-        newDetail[0].innerText=list[x].name;
-        newDetail[1].innerText=list[x].dob;
-        newDetail[2].innerText=list[x].gender;
-        newDetail[3].innerText=list[x].maraitalStatus;
-        newDetail[4].innerText=list[x].phone;
-        newDetail[5].innerText=list[x].hobby;
-        newDetail[6].innerText=list[x].address;
+        var edBtn=document.createElement("button");
         var delBtn=document.createElement("button");
         edBtn.innerText="edit";
         delBtn.innerText="del";
         edBtn.setAttribute("class","edits");
         delBtn.setAttribute("class","deletes");
-        edBtn.setAttribute("onclick",`edit(${x})`);
-        delBtn.setAttribute("onclick",`del(${x})`);
+        edBtn.setAttribute("onclick",`edit(${val})`);
+        delBtn.setAttribute("onclick",`del(${val})`);
         newDetail[7].appendChild(edBtn);
         newDetail[7].appendChild(delBtn);
         for(let i=0;i<8;i++){
@@ -70,6 +71,11 @@ function myForm(event, val){
         var edBtn=document.createElement("button");
     }
     else{
+        var currentTr = document.querySelectorAll(".details")[val];
+        var currentTdArr = currentTr.querySelectorAll("td");
+        for(let i=0;i<7;i++){
+            currentTr.replaceChild(newDetail[i], currentTdArr[i]);
+        }
         var myButton = document.getElementById("sub");
         myButton.innerHTML="Submit";
         myButton.removeAttribute("onclick");
