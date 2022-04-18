@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="personalDetails">
+        <h1>Personal Details</h1>
+        <form id="myForm">
+            <label for="name" style="position: relative; left: -56px;">Name:</label>
+            <input type="text" id="name" style="position: relative; left: 22px;" required oninvalid="this.setCustomValidity('Enter Your Name here')" oninput="this.setCustomValidity('')"><br><br>
+            <label for="dob" style="position: relative; left: -29px;">Date of Birth:</label>
+            <input type="date" id="dob" style="position: relative; left: -7px; width: 166px;" required oninvalid="this.setCustomValidity('Enter Your Date of Birth here')" oninput="this.setCustomValidity('')"><br><br>
+            <label for="gender" style="position: relative; left: -52px;">Gender:</label>
+            <select name="gender" id="gender" style="position: relative; left: 18px; width: 172px;">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select><br><br>
+            <label for="maraitalStatus">Maraital Status:</label>
+            <input type="radio" id="married" name="maraitalStatus" value="Married" required>
+            <label for="married">Married</label>
+            <input type="radio" id="unmarried" name="maraitalStatus" value="Unmarried" required>
+            <label for="unmarried">Unmarried</label><br><br>
+            <label for="phone" style="position: relative; left: -39px;">Phone No:</label>
+            <input type="number" id="phone"  style="position: relative; left: 11px;"required><br><br>
+            <label for="hobby" style="position: relative; left: -61px;">Hobby:</label>
+            
+            <input class="check" type="checkbox" id="games" name="hobby" value="Playing Games" style="position: relative; left: 10px;">
+            <label for="games" style="position: relative; left: 15px;">Playing Games</label><br>
+            <input class="check" type="checkbox" id="reading" name="hobby" value="Reading" style="position: relative; left: 15px;">
+            <label for="reading" style="position: relative; left: 20px;">Reading</label><br>
+            <input class="check" type="checkbox" id="writing" name="hobby" value="Writing" style="position: relative; left: 13px;">
+            <label for="writing" style="position: relative; left: 20px;">Writing</label><br><br>
+            <label for="address" style="position: relative; left: -40px; top: -80px;">Address:</label>
+            <textarea name="address" id="address" cols="21" rows="6"  style="position: relative; left: 21px;" required oninvalid="this.setCustomValidity('Enter Your Address here')" oninput="this.setCustomValidity('')"></textarea><br><br>
+            <button id="sub" style="position: relative; left: 60px;">Submit</button>
+        </form>
+    </div><br><br>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Maraital Status</th>
+                <th>Phone Number</th>
+                <th>Hobby</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

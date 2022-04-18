@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuehREp-kf5p-QkOOOnv4qkEkkjfJUCospXw&usqp=CAU">
+    <title>Collapse Tab</title>
+</head>
+<body>
+    <div id="container">
+        <div class="collapseTab">
+            <h1 class="heading">HTML</h1>
+            <p class="content">The HyperText Markup Language, or HTML is the 
+                standard markup language for documents designed to be displayed 
+                in a web browser. It can be assisted by technologies such as 
+                Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+                Web browsers receive HTML documents from a web server or from
+                local storage and render the documents into multimedia web pages. 
+                HTML describes the structure of a web page semantically and 
+                originally included cues for the appearance of the document.
+            </p>
+        </div>
+        <div class="collapseTab">
+            <h1 class="heading">CSS</h1>
+            <p class="content">Cascading Style Sheets (CSS) is a style sheet 
+                language used for describing the presentation of a document 
+                written in a markup language such as HTML. CSS is a 
+                cornerstone technology of the World Wide Web, alongside 
+                HTML and JavaScript.
+                CSS is designed to enable the separation of presentation 
+                and content, including layout, colors, and fonts. This 
+                separation can improve content accessibility; provide 
+                more flexibility and control in the specification of 
+                presentation characteristics; enable multiple web pages 
+                to share formatting by specifying the relevant CSS in a 
+                separate .css file, which reduces complexity and repetition 
+                in the structural content; and enable the .css file to be 
+                cached to improve the page load speed between the pages 
+                that share the file and its formatting.
+            </p>
+        </div>
+        <div class="collapseTab">
+            <h1 class="heading">JavaScript</h1>
+            <p class="content">JavaScript, often abbreviated JS, is 
+                a programming language that is one of the core 
+                technologies of the World Wide Web, alongside HTML and 
+                CSS. Over 97% of websites use JavaScript on the client 
+                side for web page behavior,[12] often incorporating 
+                third-party libraries.[13] All major web browsers 
+                have a dedicated JavaScript engine to execute the 
+                code on users' devices.
+            </p>
+        </div>
+    </div>
+    <div class="newCollapseTab">
+        <h2><u>Fill the below heading & Content box and submit to add a new collapse tab</u></h2>
+        <form>
+            <label for="newHeading">Heading:</label>
+            <input type="text" id="newHeading" style="width: 230px; height: 20px;" required><br><br>
+            <label for="newContent" style="position: relative; top: -115px;">Content:</label>
+            <textarea name="newContent" id="newContent" cols="30" rows="10" style="position: relative; left: 6px; width: 230px; height: 130px;" required></textarea><br><br>
+            <button style="position: relative; left: 180px;" onclick="newTab(event)">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

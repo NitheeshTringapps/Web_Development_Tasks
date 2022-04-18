@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #dad2d8;
+    margin: 50px;
+    align-items: center;
+}
+.heading{
+    text-align: center;
+    background-color: #e8fa45;
+    margin: 0px;
+    padding: 5px;
+    border: 1px solid #000000;
+}
+.content{
+    background-color: white;
+    text-align: justify;
+    margin: 0px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.collapseTab{
+    padding: 10px;
+}
+.heading::before{
+    content: '+';
+    position: absolute;
+    right: 100px;
+}
+.content{
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 0px;
+}
+.active .content{
+    height: auto;
+    padding: 10px;
+}
+.active .heading::before{
+    content: '-';
+    position: absolute;
+    right: 100px;
+}
+.newCollapseTab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(11, 132, 238);
+    border: 2px solid #000000;
+    padding: 20px;
+}
+label{
+    color: rgb(228, 24, 109);
+    font-size: 20px;
+}
